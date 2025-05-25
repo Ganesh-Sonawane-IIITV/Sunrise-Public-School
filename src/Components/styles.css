@@ -184,8 +184,8 @@ nav ul li ul.dropdown.open {
 /* Sections */
 section {
   background: white;
-  margin: 3rem auto;
-  padding: 2.5rem 2rem;
+  margin: 1.5rem auto;
+  padding: 0.5rem 2rem;
   max-width: 900px;
   border-radius: 12px;
   box-shadow: 0 12px 20px rgba(0,0,0,0.08);
@@ -196,10 +196,14 @@ section h3, section h2 {
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
   font-weight: 700;
   margin-bottom: 1rem;
+  margin-top: 0;
   font-size: 2.25rem;
   border-bottom: 3px solid #2980b9;
   padding-bottom: 0.3rem;
   user-select: none;
+}
+section#home > h2   {
+  margin-top: 2.5rem !important;
 }
 section p, section ul {
   font-size: 1.1rem;
@@ -212,6 +216,12 @@ section ul li {
   padding-left: 1rem;
   margin-bottom: 0.5rem;
 }
+
+main.container {
+  padding-top: 105px; /* Match your Navbar height */
+}
+
+
 
 /* Enquiry Form */
 form {
@@ -341,3 +351,34 @@ footer {
   }
 }
 
+/* Hide nav menu and show hamburger on small screens */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex !important;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+  }
+
+  .menu.open {
+    display: block !important;
+  }
+}
+
+/* On wider screens, show nav as flex */
+@media (min-width: 769px) {
+  .menu {
+    display: block !important;
+  }
+
+  .menu ul {
+    flex-direction: row !important;
+    justify-content: flex-end;
+  }
+
+  .menu-toggle {
+    display: none !important;
+  }
+}

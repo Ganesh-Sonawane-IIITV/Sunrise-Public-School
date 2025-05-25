@@ -6,6 +6,7 @@ import AboutPage from "./Components/AboutPage";
 import WhySunrise from "./Components/WhySunrise";
 import AdmissionsPage from "./Components/AdmissionsPage";
 import ContactPage from "./Components/ContactPage";
+import Footer from "./Components/Footer";
 
 const App = () => {
   return (
@@ -19,7 +20,9 @@ const App = () => {
         <Route path="/admissions" element={<AdmissionsPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
+      <Footer/>
     </Router>
+    
   );
 };
 

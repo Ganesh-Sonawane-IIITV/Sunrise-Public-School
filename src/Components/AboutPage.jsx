@@ -1,6 +1,7 @@
 // src/AboutPage.jsx
 import React from 'react';
 import './styles.css'; // Adjust path based on your project structure
+import chairmen from './chairmen.avif'; // Replace with the actual path to the chairman's photo
 
 const AboutPage = () => {
   return (
@@ -19,13 +20,35 @@ const AboutPage = () => {
           />
         </section>
 
-        <section id="chairman-message" aria-labelledby="chairman-message-title">
-          <h3 id="chairman-message-title">Chairman's Message</h3>
-          <p>
-            Welcome to Sunrise Public School! Our vision is to create a nurturing environment where students can thrive academically and personally.
-            We believe in empowering our students to become responsible citizens and lifelong learners.
-          </p>
-        </section>
+<section id="chairman-message" aria-labelledby="chairman-message-title">
+  <h3 id="chairman-message-title">Chairman's Message</h3>
+
+  <div style={{ textAlign: "center", marginBottom: "1.5rem" }}>
+    <img
+      src={chairmen} // 🔁 Replace with actual image URL
+      alt="Chairman of Sunrise Public School"
+      style={{
+        width: "180px",
+        height: "180px",
+        objectFit: "cover",
+        borderRadius: "50%",
+        boxShadow: "0 6px 18px rgba(0,0,0,0.2)",
+        marginBottom: "1rem"
+      }}
+    />
+    <div>
+      <strong style={{ fontSize: "1.2rem" }}>Mr. Rajeev Mehra</strong><br />
+      <span style={{ fontStyle: "italic", color: "#555" }}>Chairman</span>
+    </div>
+  </div>
+
+  <p style={{ textAlign: "justify" }}>
+    Welcome to Sunrise Public School! Our vision is to create a nurturing environment where students can thrive academically and personally.
+    We believe in empowering our students to become responsible citizens and lifelong learners.
+  </p>
+</section>
+
+
 
         <section id="sunrise-initiative" aria-labelledby="sunrise-initiative-title">
           <h3 id="sunrise-initiative-title">Sunrise Initiative</h3>
@@ -54,13 +77,35 @@ const AboutPage = () => {
           </p>
         </section>
 
-        <section id="principal-message" aria-labelledby="principal-message-title">
-          <h3 id="principal-message-title">Principal's Message</h3>
-          <p>
-            As the principal of Sunrise Public School, I am proud of our commitment to excellence in education.
-            We strive to create a supportive and challenging environment for our students.
-          </p>
-        </section>
+<section id="principal-message" aria-labelledby="principal-message-title">
+  <h3 id="principal-message-title">Principal's Message</h3>
+
+  <div style={{ textAlign: "center", marginBottom: "1.5rem" }}>
+    <img
+      src={chairmen} // 🔁 Replace with actual image URL
+      alt="Principal of Sunrise Public School"
+      style={{
+        width: "180px",
+        height: "180px",
+        objectFit: "cover",
+        borderRadius: "50%",
+        boxShadow: "0 6px 18px rgba(0,0,0,0.2)",
+        marginBottom: "1rem"
+      }}
+    />
+    <div>
+      <strong style={{ fontSize: "1.2rem" }}>Mr. Bhujbal</strong><br />
+      <span style={{ fontStyle: "italic", color: "#555" }}>Principal</span>
+    </div>
+  </div>
+
+  <p style={{ textAlign: "justify" }}>
+    As the principal of Sunrise Public School, I am proud of our commitment to excellence in education.
+    We strive to create a supportive and challenging environment for our students.
+  </p>
+</section>
+
+
 
         <section id="social-outreach" aria-labelledby="social-outreach-title">
           <h3 id="social-outreach-title">Social Outreach</h3>
@@ -85,10 +130,6 @@ const AboutPage = () => {
           </p>
         </section>
       </main>
-
-      <footer>
-        &copy; 2024 Sunrise Public School. All rights reserved.
-      </footer>
     </div>
   );
 };

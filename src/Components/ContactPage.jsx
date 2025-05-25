@@ -1,6 +1,7 @@
 // src/ContactPage.jsx
 import React, { useState } from 'react';
 import './styles.css'; // Ensure your CSS file matches
+import schoolimage from './schoolimage.avif'; // Replace with the actual path to the school image
 
 const ContactPage = () => {
   const [formStatus, setFormStatus] = useState('');
@@ -31,20 +32,38 @@ const ContactPage = () => {
   return (
     <div>
       <main className="container">
-        <section id="contact-info" aria-labelledby="contact-info-title">
-          <h3 id="contact-info-title">Contact Information</h3>
-          <address style={{ fontStyle: 'normal', fontWeight: 600, lineHeight: 1.6, marginBottom: '1.5rem' }}>
-            <p><strong>Address:</strong> 123 Sunshine Avenue, Happy Town, Country</p>
-            <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-            <p><strong>Email:</strong> <a href="mailto:info@sunrisepublicschool.edu">info@sunrisepublicschool.edu</a></p>
-            <p><strong>Website:</strong> <a href="http://www.sunrisepublicschool.edu" target="_blank" rel="noopener noreferrer">www.sunrisepublicschool.edu</a></p>
-          </address>
-          <img
-            src="https://images.unsplash.com/photo-1573496771706-2fe783a396d8?auto=format&fit=crop&w=900&q=80"
-            alt="School contact"
-            style={{ width: '100%', borderRadius: '12px', marginBottom: '1.5rem' }}
-          />
-        </section>
+<section id="contact-info" aria-labelledby="contact-info-title">
+  <h3 id="contact-info-title">Contact Information</h3>
+
+  <address style={{ fontStyle: 'normal', fontWeight: 600, lineHeight: 1.6, marginBottom: '1.5rem' }}>
+    <p><strong>Address:</strong> VF64+H2C, Fattepur, Hirapur, Maharashtra 431007</p>
+    <p><strong>Phone:</strong> +91 74170 72553</p>
+    <p><strong>Email:</strong> <a href="mailto:sunrisepublicschool@gmail.com">sunrisepublicschool@gmail.com</a></p>
+    <p><strong>Website:</strong> <a href="http://www.sunrisepublicschool.edu" target="_blank" rel="noopener noreferrer">www.sunrisepublicschool.edu</a></p>
+  </address>
+
+  {/* School Image */}
+  <img
+    src={schoolimage}
+    alt="School contact"
+    style={{ width: '100%', borderRadius: '12px', marginBottom: '1.5rem' }}
+  />
+
+  {/* Google Map Embed */}
+  <div style={{ borderRadius: '12px', overflow: 'hidden' }}>
+    <iframe
+      title="School Location"
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d424.4763576751531!2d75.45488754649655!3d19.861387609567693!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdba5168729ef37%3A0xc9466feef9a67a02!2sSunrise%20Public%20School!5e1!3m2!1sen!2sin!4v1748182069641!5m2!1sen!2sin"
+      width="100%"
+      height="350"
+      style={{ border: 0 }}
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</section>
+
 
         <section id="contact-form-section" aria-labelledby="contact-form-title">
           <h3 id="contact-form-title">Contact Form</h3>
@@ -77,10 +96,6 @@ const ContactPage = () => {
           </form>
         </section>
       </main>
-
-      <footer>
-        &copy; 2024 Sunrise Public School. All rights reserved.
-      </footer>
     </div>
   );
 };

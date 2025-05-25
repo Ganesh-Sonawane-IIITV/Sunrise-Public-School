@@ -7,6 +7,8 @@ import display3 from './display3.webp';
 //import display4 from './display4.webp';
 import display5 from './display5.webp';
 import display6 from './display6.webp';
+import display7 from './display7.webp';
+import Welcome from './welcome.jpg';
 
 const imageDimensions = {
   0: { height: "60%", width: "auto" },
@@ -141,16 +143,20 @@ return (
 </div>
       <main className="container">
         {/* HERO SECTION */}
-        <section
-          id="home"
-          className="hero"
-          tabIndex="-1"
-          aria-label="Welcome to Sunrise Public School"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1400&q=80')",
-          }}
-        >
+<section
+  id="home"
+  className="hero"
+  tabIndex="-1"
+  aria-label="Welcome to Sunrise Public School"
+  style={{
+    backgroundImage: `url(${Welcome})`,
+    backgroundSize: "contain",      // or "cover", or "100% 300px"
+    backgroundRepeat: "no-repeat",  // prevent tiling
+    backgroundPosition: "center",   // center the image
+    height: "400px",                // set desired height
+  }}
+>
+
           <h2>Welcome to Sunrise Public School</h2>
           <p>Where every child is nurtured to shine bright!</p>
           <div className="tagline">Inspire. Learn. Grow.</div>
@@ -167,7 +173,7 @@ return (
             <li>Community engagement and social responsibility</li>
           </ul>
           <img
-            src="https://img.freepik.com/premium-vector/vector-illustration-showing-teacher-teaching-board-students-listening-attentively_642458-296.jpg?semt=ais_hybrid&w=740"
+            src={display7}
             alt="Students presenting in classroom"
             style={{ width: "100%", marginTop: "1rem", borderRadius: "10px" }}
           />
@@ -253,10 +259,6 @@ return (
           ))}
         </section>
       </main>
-
-      {/* FOOTER */}
-      <footer>&copy; 2024 Sunrise Public School. All rights reserved.</footer>
-
   </>
 );
 
