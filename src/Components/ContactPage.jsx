@@ -50,18 +50,23 @@ const ContactPage = () => {
   />
 
   {/* Google Map Embed */}
-  <div style={{ borderRadius: '12px', overflow: 'hidden' }}>
-    <iframe
-      title="School Location"
-      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d424.4763576751531!2d75.45488754649655!3d19.861387609567693!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdba5168729ef37%3A0xc9466feef9a67a02!2sSunrise%20Public%20School!5e1!3m2!1sen!2sin!4v1748182069641!5m2!1sen!2sin"
-      width="100%"
-      height="350"
-      style={{ border: 0 }}
-      allowFullScreen=""
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-    ></iframe>
-  </div>
+  <div style={{ borderRadius: '12px', overflow: 'hidden', position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+  <iframe
+    title="School Location"
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d424.4763576751531!2d75.45488754649655!3d19.861387609567693!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdba5168729ef37%3A0xc9466feef9a67a02!2sSunrise%20Public%20School!5e1!3m2!1sen!2sin!4v1748182069641!5m2!1sen!2sin"
+    style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      border: 0
+    }}
+    allowFullScreen=""
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
 </section>
 
 
