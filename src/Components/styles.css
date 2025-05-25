@@ -1,0 +1,343 @@
+/* Reset & base styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  line-height: 1.75;
+  color: #2c3e50;
+  background: #f4f6f8;
+  scroll-behavior: smooth;
+}
+a {
+  color: #2980b9;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: #f39c12;
+  outline: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+header {
+  background: #34495e;
+  color: #ecf0f1;
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  font-variant: small-caps;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+header .container {
+  padding: 1.25rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+header h1 {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 4px;
+  font-size: 1.8rem;
+  user-select: none;
+}
+nav {
+  position: relative;
+}
+nav ul {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+nav > ul > li {
+  position: relative;
+}
+nav a, nav button.nav-btn {
+  color: #ecf0f1;
+  font-weight: 600;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: inherit;
+}
+nav a:hover, nav a:focus,
+nav button.nav-btn:hover, nav button.nav-btn:focus {
+  color: #f39c12;
+  outline: none;
+}
+nav button.nav-btn {
+  user-select: none;
+}
+nav button.nav-btn span.dropdown-arrow {
+  margin-left: 4px;
+  font-size: 0.7rem;
+  line-height: 1;
+}
+
+/* Dropdown menu */
+nav ul li ul.dropdown {
+  display: none;
+}
+nav ul li:hover > ul.dropdown,
+nav ul li:focus-within > ul.dropdown {
+  display: block;
+}
+
+
+nav ul li ul.dropdown li a {
+  display: block;
+  padding: 0.5rem 1.2rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #ecf0f1;
+  white-space: nowrap;
+}
+nav ul li ul.dropdown.open {
+  display: block;
+}
+nav ul li ul.dropdown li a:hover,
+nav ul li ul.dropdown li a:focus {
+  background-color: #2c3e50;
+  color: #f39c12;
+  outline: none;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, rgba(34,85,148,0.85) 40%, rgba(46,134,193,0.9) 80%), center/cover no-repeat;
+  color: #ecf0f1;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+  box-shadow: inset 0 0 100px rgba(0,0,0,0.5);
+}
+.hero h2 {
+  font-size: 3.75rem;
+  margin-bottom: 0.5rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  font-family: 'Georgia', serif;
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.7);
+  user-select: none;
+}
+.hero p {
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 600;
+  max-width: 700px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+  line-height: 1.4;
+  margin-top: 0;
+  user-select: none;
+}
+.hero .tagline {
+  margin-top: 1.2rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0.9;
+  user-select: none;
+}
+nav ul li {
+  position: relative; /* This anchors the dropdown's absolute position */
+}
+nav ul li ul.dropdown {
+  position: absolute;
+  top: 100%;     /* Position it just below the nav item */
+  left: 0;
+  display: none;
+  background: #34495e;
+  padding: 0.5rem 0;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  min-width: 210px;
+  z-index: 9999;
+}
+nav ul li ul.dropdown.open {
+  display: block;
+}
+
+
+/* Sections */
+section {
+  background: white;
+  margin: 3rem auto;
+  padding: 2.5rem 2rem;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 12px 20px rgba(0,0,0,0.08);
+  border-left: 8px solid #2980b9;
+}
+section h3, section h2 {
+  color: #2980b9;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 2.25rem;
+  border-bottom: 3px solid #2980b9;
+  padding-bottom: 0.3rem;
+  user-select: none;
+}
+section p, section ul {
+  font-size: 1.1rem;
+  color: #34495e;
+  line-height: 1.9;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+section ul li {
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Enquiry Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+}
+label {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+input, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  font-weight: 400;
+}
+button[type="submit"] {
+  width: fit-content;
+  background-color: #2980b9;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background-color: #2471A3;
+  outline: none;
+}
+.submit-message {
+  color: #27ae60;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  user-select: none;
+}
+
+/* FAQs */
+.faq-item {
+  margin-bottom: 1.5rem;
+}
+.faq-question {
+  background: none;
+  border: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  color: #2980b9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  font-family: inherit;
+}
+.faq-question:focus {
+  outline: 2px solid #f39c12;
+  outline-offset: 3px;
+}
+.faq-answer {
+  padding-top: 0.5rem;
+  font-weight: 400;
+  color: #34495e;
+  line-height: 1.5;
+}
+.arrow {
+  font-weight: 700;
+  font-size: 1.3rem;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+/* Footer */
+footer {
+  background: #2c3e50;
+  color: #bdc3c7;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  user-select: none;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+  margin-top: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    gap: 1rem;
+    justify-content: center;
+  }
+  .hero h2 {
+    font-size: 2.8rem;
+  }
+  .hero p {
+    font-size: 1.3rem;
+  }
+  section {
+    padding: 2rem 1rem;
+    max-width: 95vw;
+  }
+  header .container {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 400px) {
+  nav ul {
+    gap: 0.7rem;
+    font-size: 0.9rem;
+  }
+}
+
